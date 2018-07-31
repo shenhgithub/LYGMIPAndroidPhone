@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/dialog_background" >
+
+    <LinearLayout
+        android:id="@+id/first_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_data"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <CheckBox
+                android:id="@+id/all_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:checked="true"
+                android:text="@string/select_all"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/all_select"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/select_file_type"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/clear_data_list"
+            android:layout_width="fill_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/dialog_message"
+            android:fadingEdge="vertical"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    
+    
+    <LinearLayout
+        android:layout_width="331dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_layout"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/clear_ok"
+            style="@style/Dialog_button_text"
+            android:layout_width="159dip"
+            android:layout_height="41dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="@string/net_confirm"
+            android:background="@drawable/selector_dialog_button"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/clear_cancel"
+            style="@style/Dialog_button_text"
+            android:layout_width="159dip"
+            android:layout_height="41dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/cancle"
+            android:background="@drawable/selector_dialog_button_left"
+            android:gravity="center" />
+    </LinearLayout>
+    
+    
+    
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_1"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/waitdialog_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/waitanim"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:padding="20dip" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_message"
+        android:padding="10dip" >
+
+        <RelativeLayout
+            android:id="@+id/top_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/leftTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="发送消息给"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            
+            <TextView
+                android:id="@+id/rightTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/leftTV"
+                android:layout_marginTop="10dip"
+                android:text="陈小倩"
+                android:textColor="@color/blue"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        
+        <ImageView 
+            android:id="@+id/flagIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:layout_below="@id/top_rl"
+            android:background="@drawable/message_6"/>
+        
+        <TextView 
+            android:id="@+id/flagTv"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:layout_below="@id/flagIV" 
+            android:text="发送成功"
+            android:textColor="@color/green"
+            android:textSize="25sp"
+            />
+        <TextView 
+            android:id="@+id/tip1"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:layout_below="@id/flagTv" 
+            android:text="补充说明："
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            />
+        
+        <TextView 
+            android:id="@+id/tip2"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:layout_below="@id/tip1" 
+            android:singleLine="false"
+            android:text="如果发送失败，这里的文字提示显示“发送失败”，并配有发送失败的icon"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

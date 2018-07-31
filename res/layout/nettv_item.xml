@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/nettv_list_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:background="@drawable/list_1" >
+
+        <ImageView
+            android:id="@+id/nettv_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dip"
+            android:src="@drawable/icon_folder" />
+
+        <ImageView
+            android:id="@+id/new_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/nettv_item_icon"
+            android:layout_marginRight="-10dip"
+            android:layout_marginTop="-10dip"
+            android:layout_toLeftOf="@id/nettv_item_icon"
+            android:src="@drawable/new_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/nettv_item_name"
+            style="@style/offical_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:gravity="left"
+            android:layout_toLeftOf="@+id/im_arrow"
+            android:layout_toRightOf="@+id/nettv_item_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="00000" />
+
+        <ImageView
+            android:id="@+id/im_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dip"
+            android:src="@drawable/frame_arrow" />
+    </RelativeLayout>
+
+</RelativeLayout>

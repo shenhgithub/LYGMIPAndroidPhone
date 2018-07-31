@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/company_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background"
+        android:clickable="true"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingBottom="20dip"
+        android:paddingTop="10dip">
+
+        <RelativeLayout
+            android:id="@+id/address_header_rlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/address_title_rlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/address_title_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/address_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/address_title_back"
+                    android:gravity="center"
+                    android:text="添加联系人"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+            
+            
+             <!-- 两个切换标签 -->
+          <RelativeLayout
+            android:id="@+id/fragment_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address_title_rlayout"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/fragment_first_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/switching_1"
+                android:clickable="true"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/fragment_first_ll_tv"
+                    style="@style/offical_other_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="最近联系人" />
+
+                <ImageView
+                    android:id="@+id/fragment_first_im_choose_lien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/choose_line_1" />
+
+                <ImageView
+                    android:id="@+id/fragment_first_im_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shadow_2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_second_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/fragment_first_ll"
+                android:background="@drawable/switching_1"
+                android:clickable="true" >
+
+                <ImageView
+                    android:id="@+id/fragment_second_im_shadow_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/shadow_3" />
+
+                <TextView
+                    android:id="@+id/fragment_second_ll_tv"
+                    style="@style/offical_other_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="企业通讯录" />
+
+                <ImageView
+                    android:id="@+id/fragment_second_im_choose_lien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="-2dip"
+                    android:background="@drawable/choose_line_1" />
+
+                <ImageView
+                    android:id="@+id/fragment_second_im_shadow_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shadow_2" />
+            </RelativeLayout>
+            </RelativeLayout>
+            <ImageView
+            android:id="@+id/fragment_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_ll"
+            android:background="@drawable/shadow_1" />
+        </RelativeLayout>
+        
+
+
+         <!-- 选择联系人列表 -->
+        <RelativeLayout
+            android:id="@+id/address_list_rlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="240dip"
+            android:layout_below="@id/address_header_rlayout"
+            android:background="@drawable/dialog_message" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/address_bottom_rlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/address_list_rlayout" >
+
+            <TextView
+                android:id="@+id/address_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address_hasselector"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/address_bottom_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/address_bottom_button_rlayout"
+                android:layout_below="@id/address_bottom_text"
+                android:background="@drawable/dialog_message" >
+            </ListView>
+
+            <LinearLayout
+                android:id="@+id/address_bottom_button_rlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/address_bottom_button_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/button_bg_1"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="確定"
+                        android:textColor="@color/custom_button_pressed_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/address_bottom_button_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/button_bg_1"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="取消"
+                        android:textColor="@color/custom_button_pressed_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/load_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/loading_1" >
+
+                <ImageView
+                    android:id="@+id/waitdialog_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/waitanim"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

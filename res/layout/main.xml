@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/list_bg" >
+
+    <LinearLayout
+        android:id="@+id/main_linearlayout_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_tab_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/main_footbar_0"
+            style="@style/main_bottom_radio"
+            android:drawableTop="@drawable/function_selector"
+            android:gravity="center"
+            android:text="@string/main_function" />
+
+        <ImageView
+            style="@style/main_bottom_cutline"
+            android:contentDescription="@null" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_1"
+            style="@style/main_bottom_radio"
+            android:drawableTop="@drawable/function_selector"
+            android:gravity="center"
+            android:text="@string/main_sign" />
+
+        <ImageView
+            style="@style/main_bottom_cutline"
+            android:contentDescription="@null" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_2"
+            style="@style/main_bottom_radio"
+            android:drawableTop="@drawable/function_selector"
+            android:gravity="center"
+            android:text="@string/main_myapp" />
+
+        <ImageView
+            style="@style/main_bottom_cutline"
+            android:contentDescription="@null" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_3"
+            style="@style/main_bottom_radio"
+            android:drawableTop="@drawable/function_selector"
+            android:gravity="center"
+            android:text="@string/main_newmsg" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/main_linearlayout_footer" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_linearlayout_footer"
+        android:background="@drawable/main_tab_bg_1" />
+
+</RelativeLayout>

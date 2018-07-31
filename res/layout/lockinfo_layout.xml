@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	>
+    
+    <RelativeLayout
+        android:id="@+id/lockinfo_rl"
+        android:layout_width="400dip"
+        android:layout_height="300dip"
+        android:padding="20dip"
+        android:background="@drawable/dialog_background" 
+        >
+    
+	    <RelativeLayout
+	        android:id="@+id/head_rl"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dip"
+	        android:layout_alignParentTop="true">
+	        
+	        <ImageView 
+	            android:id="@+id/lock_im"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="50dip"
+	            android:background="@drawable/pdf_lock"
+	            android:contentDescription="@null"/>
+	        
+	        <TextView
+	            style="@style/Pdf_lock_title"
+	            android:id="@+id/title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_toRightOf="@+id/lock_im"
+	            android:text="@string/pdf_lock_title"
+	            android:layout_marginLeft="15dip"
+	            />
+	    </RelativeLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/bottom_ll"
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="10dip"
+	        android:layout_height="50dip"
+			android:layout_alignParentBottom="true"
+	        android:orientation="horizontal" >
+	
+	        <Button
+	            android:id="@+id/left_btn"
+	            style="@style/offical_other_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="5dip"
+	            android:layout_weight="1"
+	            android:background="@drawable/button_bg_1"
+	            android:gravity="center"
+	            android:text="@string/pdf_lock_close" />
+	
+	        <Button
+	            android:id="@+id/right_btn"
+	            style="@style/offical_other_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dip"
+	            android:layout_weight="1"
+	            android:background="@drawable/button_bg_1"
+	            android:gravity="center"
+	            android:text="@string/pdf_lock_checkdetail" />
+	    </LinearLayout>
+	    
+	    <RelativeLayout
+	        android:id="@+id/info_rl"
+	        android:layout_width="match_parent"
+	        android:layout_height="180dip"
+	        android:layout_below="@+id/head_rl"
+	        android:layout_above="@+id/bottom_ll"
+	        android:background="@drawable/dialog_message">
+	        
+	        <TextView
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:text="@string/pdf_lock_detail"
+	            android:layout_margin="10dip"
+	            android:textSize="20sp"/>
+	        
+	     </RelativeLayout>
+
+	</RelativeLayout>
+</RelativeLayout>

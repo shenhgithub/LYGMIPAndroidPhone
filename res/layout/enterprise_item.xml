@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:background="@drawable/selector_list_item" >
+
+        <TextView
+            android:id="@+id/enterprise_name"
+            android:layout_width="260dip"
+            android:layout_height="55dip"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text="企业名称企业名称企业名称企业名称企业名称企业名称"
+            android:textSize="@dimen/text_size_20" 
+            android:singleLine="true"
+           />
+        <ImageView 
+            android:id="@+id/select_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_selected_2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:visibility="invisible"/>
+        <ImageView 
+            android:id="@+id/not_select_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_selected_0"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:background="@drawable/line" />
+
+</RelativeLayout>

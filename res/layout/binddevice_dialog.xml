@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+     android:paddingLeft="20dip"
+    android:paddingRight="20dip"
+    android:paddingTop="20dip"
+    android:paddingBottom="30dip">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_message"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/top_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <TextView
+                android:id="@+id/userNameTv"
+                style="@style/change_bind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Bind_userName" />
+
+            <TextView
+                android:id="@+id/userName"
+                style="@style/change_bind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:minWidth="100dip"
+                android:textIsSelectable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondtop_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <TextView
+                android:id="@+id/deviceTv"
+                style="@style/change_bind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Bind_deviceID" />
+
+            <TextView
+                android:id="@+id/device"
+                style="@style/change_bind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_password_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <TextView
+                android:id="@+id/old_password_tv"
+                style="@style/change_bind_text"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/Bind_loginPass" />
+
+            <EditText
+                android:id="@+id/bindEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input"
+                android:focusable="true"
+                android:hint="@string/Bind_loginPassHint"
+                android:maxLength="15"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/LIGHTGRAY"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_2btn_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/left_btn"
+                style="@style/offical_other_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_dialog_button_left"
+                android:gravity="center"
+                android:text="@string/Bind_cancel"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/right_btn"
+                style="@style/offical_other_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="15dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_dialog_button"
+                android:gravity="center"
+                android:text="@string/Bind_confirm"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip_one"
+            style="@style/change_bind_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:paddingLeft="25dp"
+            android:paddingRight="20dp"
+            android:singleLine="false"
+            android:text="@string/Bind_tip_one" />
+
+        <TextView
+            android:id="@+id/tip_two"
+            style="@style/change_bind_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:paddingLeft="25dp"
+            android:paddingRight="20dp"
+            android:singleLine="false"
+            android:text="@string/Bind_tip_two" />
+
+        <TextView
+            android:id="@+id/tip_three"
+            style="@style/change_bind_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:paddingLeft="25dp"
+            android:paddingRight="20dp"
+            android:singleLine="false"
+            android:text="@string/Bind_tip_three" />
+    </LinearLayout>
+
+</LinearLayout>

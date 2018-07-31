@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="list_title_black">#222222</color>
+    <color name="list_time_gray">#666666</color>
+    <color name="green">#14a0c6</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0063A4</color>
+    <color name="list_text_black">#3a3a3a</color>
+    <color name="transparent">#00000000</color>
+    <color name="item_common">#F111</color>
+    <color name="item_1">#F222</color>
+    <color name="item_2">#F000</color>
+    <color name="orange">#FFF48B00</color>
+    <color name="darkorange">#FF824600</color>
+    <color name="transparent_gray">#A000</color>
+    <color name="gray">#666666</color>
+    <color name="deep_yellow">#ff8a01</color>
+    <color name="deep_black">#43495b</color>
+    <color name="gray_9">#999999</color>
+    <color name="translucent">#e0000000</color>
+    <color name="color_customblue">#4075a3</color>
+    <color name="pdf_info_index_text">#015b94</color>
+    <color name="pdf_sign_hint_text_color">#e2fff6</color>
+    <color name="cloud_contact_divide_background">#E0E8F3</color>
+    <color name="cloud_contact_divide_char">#889EC4</color>
+    <color name="cloud_contact_name">#0768A6</color>
+    <color name="cloud_contact_number">#A6A6A6</color>
+    <color name="cloud_contact_char">#E0E8F3</color>
+    <color name="cloud_up">#353535</color>
+    <color name="cloud_down">#252525</color>
+    <color name="bar">#C0202020</color>
+    <color name="warn_color">#757575</color>
+    <color name="warntitle_color">#FF4500</color>
+    <color name="custom_button_pressed_color">#3B6F92</color>
+    <color name="custom_button_color">#ffffff</color>
+    <color name="offica_deal">#487eb0</color>
+    <color name="LIGHTGRAY">#A9A9A9</color>
+    <color name="net_yellow">#ebc522</color>
+    <color name="net_blue">#0a59a8</color>
+    <color name="search_blue">#4075A3</color>
+    <color name="red">#ff0000</color>
+    <color name="list_bg">#DFDFDF</color>
+    <color name="qiandao_position">#43A3FE</color>
+    <color name="qiandao_date">#849EB7</color>
+    <color name="app_grey">#D1D2D2</color>
+    <color name="title_label">#97acb9</color>
+    <color name="item_color">#1a1a1a</color>
+    <color name="ship_text">#474747</color>
+    <color name="title_backgrond">#85A5C4</color>
+    <color name="text_background">#E9F1F7</color>
+
+</resources>

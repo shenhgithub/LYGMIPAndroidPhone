@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/download_file_progress_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:padding="20dp"
+    android:background="@drawable/dialog_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/UpdDialog_updateing"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/percent"
+        style="@style/main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/UpdDialog_percent"
+        android:textSize="25sp" />
+
+    <ProgressBar
+        android:id="@+id/download_file_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/percent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:progressDrawable="@drawable/downloadfile_progressbar" />
+
+    <Button
+        android:id="@+id/cancel"
+        style="@style/offical_other_text"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/download_file_progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_dialog_button"
+        android:text="@string/UpdDialog_cancel" />
+
+</RelativeLayout>

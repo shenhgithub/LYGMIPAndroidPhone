@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/pdf_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title" >
+
+        <!-- 返回 -->
+
+        <RelativeLayout
+            android:id="@+id/pdf_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:clickable="true" >
+
+            <!-- android:background="@drawable/selector_title" -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_back_button"
+                android:clickable="false"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+        <!-- 签批 -->
+
+        <RelativeLayout
+            android:id="@+id/pdf_sign_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_title"
+            android:clickable="true" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_pdf_sign"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pdf_title"
+            style="@style/Pdf_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/pdf_sign_im"
+            android:layout_toRightOf="@+id/pdf_back"
+            android:layout_marginLeft="10dip"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="文件阅览" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pdf_sign_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pdf_header"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/pdf_sign_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdf_header"
+            android:background="@drawable/tab_bg_1" >
+
+            <RelativeLayout
+                android:id="@+id/pdf_sign_color_rl0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_sign_color_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_pdf_sign_background"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_sign_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pen_color_red"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pdf_sign_line_rl0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_sign_line_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_pdf_sign_background"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_sign_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pen_crude"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_sign_eraser_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_pdf_sign_background"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_sign_eraser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pen_rubber"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_sign_undo_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_pdf_sign_background"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_sign_undo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pen_reduction"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_sign_redo_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/selector_pdf_sign_background"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_sign_redo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pen_reduction_2"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pdf_sign_empty_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/selector_pdf_sign_background"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/pdf_sign_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="清空"
+                    android:textColor="@color/color_customblue" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pdf_sign_save_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/selector_pdf_sign_background"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/pdf_sign_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="结束"
+                    android:textColor="@color/color_customblue" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdf_sign_ll"
+            android:background="@drawable/tab_bg_2"
+            android:contentDescription="@null" />
+
+        <RelativeLayout
+            android:id="@+id/pen_sign_color_seleced_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdf_sign_ll"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/pen_sign_color_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/selector_pdf_sign_selected_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pen_color_green"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pen_sign_color_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pen_sign_color_green"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/selector_pdf_sign_selected_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pen_color_red"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pen_sign_color_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pen_sign_color_red"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/selector_pdf_sign_selected_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pen_color_black"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pen_sign_color_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pen_sign_color_black"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/selector_pdf_sign_selected_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pen_color_blue"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pen_sign_line_seleced_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdf_sign_ll"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/pen_sign_line_crude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/selector_pdf_sign_selected_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pen_crude"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pen_sign_line_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pen_sign_line_crude"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/selector_pdf_sign_selected_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pen_normal"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pen_sign_line_fine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pen_sign_line_normal"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/selector_pdf_sign_selected_background" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pen_fine"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/pdf_number"
+            style="@style/Pdf_pagenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/pdf_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdf_number"
+            android:background="@drawable/bottom_1" >
+
+            <!-- 上一页 -->
+
+            <RelativeLayout
+                android:id="@+id/pdf_page_pre"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_2" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_page_pre_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_page_pre_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_pdf_pre"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        style="@style/Pdf_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdf_page_pre_im"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/pdf_page_pre" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pdf_page_pre_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottom_line"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <!-- 翻转 -->
+
+            <RelativeLayout
+                android:id="@+id/pdf_turn"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_2" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_turn_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_turn_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_pdf_turn"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        style="@style/Pdf_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdf_turn_im"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/pdf_turn" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pdf_turn_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottom_line"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+            <!-- 帮助 -->
+
+            <RelativeLayout
+                android:id="@+id/pdf_help"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_2" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_help_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_help_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_pdf_help"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        style="@style/Pdf_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdf_help_im"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/pdf_help" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pdf_help_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottom_line"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+            <!-- 信息 -->
+
+            <RelativeLayout
+                android:id="@+id/pdf_info"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_2" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_info_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_info_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_pdf_info"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        style="@style/Pdf_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdf_info_im"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/pdf_info" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pdf_info_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottom_line"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <!-- 发送 -->
+
+            <RelativeLayout
+                android:id="@+id/pdf_send"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_2" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_send_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_send_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_pdf_send"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        style="@style/Pdf_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdf_send_im"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/pdf_send" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pdf_send_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottom_line"
+                    android:contentDescription="@null"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <!-- 附件 -->
+
+            <RelativeLayout
+                android:id="@+id/pdf_attach"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_2" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_attach_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_attach_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_pdf_send"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        style="@style/Pdf_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdf_attach_im"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/pdf_attach" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pdf_send_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottom_line"
+                    android:contentDescription="@null"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <!-- 下一页 -->
+
+            <RelativeLayout
+                android:id="@+id/pdf_page_next"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_2" >
+
+                <RelativeLayout
+                    android:id="@+id/pdf_page_next_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/pdf_page_next_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/selector_pdf_next"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        style="@style/Pdf_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pdf_page_next_im"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/pdf_page_next" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/pdf_page_next_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bottom_line"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/dialog_background"
+    android:paddingBottom="30dip"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip"
+    android:paddingTop="10dip" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Dialog_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="个人信息"
+        android:textColor="@color/white"
+        android:textSize="20dip" />
+
+     <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title" >
+
+        <LinearLayout
+            android:id="@+id/details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/dialog_message"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="7dip" >
+
+            <RelativeLayout
+                android:id="@+id/first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"  >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20dip"
+                    android:text="李苗" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip" >
+
+                <TextView
+                    android:id="@+id/add_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:text="第五开发间" />
+
+                <EditText
+                    android:id="@+id/add_Edit"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                   android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:maxLength="15"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="机构:" />
+            </RelativeLayout>
+
+            
+
+
+            <RelativeLayout
+                android:id="@+id/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/departmentname_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:text="技术部门" />
+
+                <EditText
+                    android:id="@+id/departmentname_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="部门:" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/duty_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:text="部门经理" />
+
+                <EditText
+                    android:id="@+id/duty_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="职务:" />
+            </RelativeLayout>
+<RelativeLayout
+                android:id="@+id/third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/phone_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                   android:layout_marginLeft="100dip"
+                    android:text="1515185016" />
+
+                <EditText
+                    android:id="@+id/phone_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:maxLength="11"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="工作手机:" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/baktel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:text="12345678912" />
+
+                <EditText
+                    android:id="@+id/baktel_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="备用手机:" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/officetel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:text="5001230" />
+
+                <EditText
+                    android:id="@+id/officetel_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="办公电话:" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/bakofficetel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                   android:layout_marginLeft="100dip"
+                    android:text="4564564" />
+
+                <EditText
+                    android:id="@+id/bakofficetel_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="备用电话:" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fourth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/email_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                   android:layout_marginLeft="100dip"
+                    android:text="li_miao@hoperun.com" />
+
+                <EditText
+                    android:id="@+id/email_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="集团邮箱:" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/peremail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                   android:layout_marginLeft="100dip"
+                    android:text="aa_aa@hoperun.com" />
+
+                <EditText
+                    android:id="@+id/peremail_Edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                   android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="个人邮箱:" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/eleven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/markweibo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:text="是" />
+
+                <EditText
+                    android:id="@+id/markweibo_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="100dip"
+                    android:background="@drawable/input"
+                    android:focusable="true"
+                    android:hint="请输入修改信息"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/LIGHTGRAY"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="云之家:" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="270dip"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/details"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/confirm_btn"
+                    style="@style/Dialog_button_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="41dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_dialog_button_left"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/modify_btn"
+                    style="@style/Dialog_button_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="41dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_dialog_button"
+                    android:gravity="center"
+                    android:text="修改个人信息"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:layout_alignRight="@+id/scrollView1"
+        android:background="@drawable/person_close" />
+
+</RelativeLayout>

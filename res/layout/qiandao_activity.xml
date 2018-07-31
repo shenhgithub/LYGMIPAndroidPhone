@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_3" >
+
+    <com.hoperun.manager.components.HeadView
+        android:id="@+id/mobile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--
+    <RelativeLayout
+        android:id="@+id/cotact_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <RelativeLayout
+            android:id="@+id/fragment_back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title" >
+
+            <ImageView
+                android:id="@+id/fragment_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fragment_title"
+            style="@style/offical_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fragment_search_rl"
+            android:layout_toRightOf="@+id/fragment_back_rl"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="签到记录" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_search_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/fragment_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search" />
+        </RelativeLayout>
+    </RelativeLayout>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/position_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_header"
+        android:background="@drawable/sign_title_bg"
+        android:paddingBottom="5dip" >
+
+        <RelativeLayout
+            android:id="@+id/sign_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip" >
+
+            <ImageView
+                android:id="@+id/signIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_sign_button"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signIV"
+                android:layout_centerHorizontal="true"
+                android:text="签到"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/current_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/sign_rl"
+            android:background="@drawable/sign_t_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text=""
+            android:textColor="#43a3fe"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/position_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@id/sign_rl"
+            android:text="我现在的位置在："
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current_position"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="40dip"
+            android:layout_toRightOf="@+id/sign_rl"
+            android:gravity="center_vertical"
+            android:text="2014-03-27 07:52"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/position_layout"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text="我的签到记录"
+            android:textColor="#4d4d4d"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/position_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hint"
+            android:layout_marginTop="10dip"
+            android:divider="@null"
+            android:dividerHeight="0dip" >
+        </ListView>
+    </RelativeLayout>
+    <!--
+    <RelativeLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:text="取消"
+            android:textColor="@color/green"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:text="签到"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    -->
+
+</RelativeLayout>

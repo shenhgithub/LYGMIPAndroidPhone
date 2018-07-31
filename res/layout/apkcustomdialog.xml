@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/dialog_background"
+    android:paddingTop="10dip" 
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingBottom="25dip">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/dialog_message_layout"
+        android:layout_width="360dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="6dip"
+        android:background="@drawable/dialog_message"
+        android:gravity="center" >
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="80dip">
+
+            <TextView
+                android:id="@+id/dialog_message"
+                android:layout_width="wrap_content"
+                android:layout_height="80dip"
+                android:gravity="left"
+                android:layout_gravity="center_vertical"
+                android:textColor="#474747"
+                android:textIsSelectable="true"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_2btn_layout"
+        android:layout_width="331dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_message_layout"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="6dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/left_btn"
+            style="@style/Dialog_button_text"
+            android:layout_width="159dip"
+            android:layout_height="41dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@drawable/selector_dialog_button_left"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/right_btn"
+            style="@style/Dialog_button_text"
+            android:layout_width="159dip"
+            android:layout_height="41dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_dialog_button"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_1btn_layout"
+        android:layout_width="360dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_message_layout"
+        android:layout_marginTop="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/mid_btn"
+            style="@style/Dialog_button_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/dialog_button_selector"
+            android:gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

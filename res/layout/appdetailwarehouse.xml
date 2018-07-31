@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/appheader" />
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/header"
+        android:background="@drawable/banner"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/search_funnel_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/button_bg_2"
+            android:clickable="true"
+            android:descendantFocusability="afterDescendants"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <ImageView
+                android:id="@+id/funnel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/funnel"
+                android:clickable="false"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/screean_text"
+                style="@style/offical_other_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/funnel"
+                android:text="@string/screen"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/screean_text"
+                android:background="@drawable/pull_down"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toRightOf="@+id/search_funnel_ll"
+            android:paddingLeft="10dip" >
+
+            <EditText
+                android:id="@+id/search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/input_gray"
+                android:hint="@string/keywordforsearch" />
+
+            <Button
+                android:id="@+id/app_search_btn"
+                style="@style/offical_other_text"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignRight="@+id/search_edt"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_bg_2"
+                android:text="@string/search"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+   <!--   <ListView
+        android:id="@+id/app_detail_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent" >
+    </ListView>-->
+    
+     <com.hoperun.manager.components.DropDownRefreshListView
+        android:id="@+id/app_detail_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:overScrollFooter="@null"
+        android:scrollbars="none" >
+    </com.hoperun.manager.components.DropDownRefreshListView>
+
+</LinearLayout>

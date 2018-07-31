@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp" >
+
+    <TextView
+        android:id="@+id/search_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" 
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:background="@drawable/xiaoqipao"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/search_item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/search_item_number"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/search_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="wangba"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/search_item_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="wangba"
+            android:textColor="#989898"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/search_item_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#989898"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/search_info_line"
+        android:contentDescription="@null" />
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build-MIP-Andriod-sonar" default="sonar">
+    <import file="/opt/sonar-3.2/conf/SonarBuildConfig.xml" />
+
+    <property name="sonar.projectKey" value="com.hoperun.IA:201307PRODR-C-CN-IA-001-MIP-Andriod" />
+    <property name="sonar.projectName" value="IA.201307PRODR-C-CN-IA-001-MIP-Andriod" />
+    <property name="sonar.projectVersion" value="1.0" />
+    <property name="sonar.sources" value="src" />
+    <property name="sonar.binaries" value="bin/classes"/>
+    
+    <target name="sonar">
+        <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+            <classpath path="/opt/sonar-ant-task-1.4.jar"/>
+        </taskdef>
+        <sonar:sonar version="3.2" key="org.codehaus.sonar:$(sonar.projectName)" xmlns:sonar="antlib:org.sonar.ant"/>
+    </target>
+</project>

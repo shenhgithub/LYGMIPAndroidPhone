@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame_white"
+    android:orientation="vertical" >
+
+    <com.hoperun.manager.components.DropDownRefreshListView
+        android:id="@+id/office_lv_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:overScrollFooter="@null"
+        android:scrollbars="none" >
+    </com.hoperun.manager.components.DropDownRefreshListView>
+    
+       <RelativeLayout
+        android:id="@+id/no_datarl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        
+        <ImageView
+            android:id="@+id/no_dataim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_centerInParent="true"
+            android:background="@drawable/list_nodata"
+            android:contentDescription="null"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_1" >
+
+            <ImageView
+                android:id="@+id/waitdialog_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/waitanim"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+<!-- pdf下载框 -->
+    <RelativeLayout
+        android:id="@+id/pdfload_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_3"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dip" >
+
+            <ProgressBar
+                android:id="@+id/downloadprogress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:max="100"
+                android:progressDrawable="@drawable/downloadfile_progressbar" />
+
+            <Button
+                android:id="@+id/cancel_download"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_toRightOf="@+id/downloadprogress"
+                android:background="@drawable/loading_6" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

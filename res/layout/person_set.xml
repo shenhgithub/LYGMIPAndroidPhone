@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/person_set_layout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/main_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <RelativeLayout
+            android:id="@+id/fragment_back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/userset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_back_button"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fragment_title"
+            style="@style/offical_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/fragment_back_rl"
+            android:text="个人设置" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/verScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_top_layout"
+        android:background="@drawable/background_3"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/parent_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical" >
+
+            <!-- android:background="@drawable/dialog_message" -->
+            <!-- "个人信息" -->
+
+            <RelativeLayout
+                android:id="@+id/personal"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center" 
+                android:background="@drawable/selector_list_item">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp" 
+                    >
+
+                    <TextView
+                        android:id="@+id/themeback"
+                        style="@style/PersonSet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="个人信息" />
+
+                    <TextView
+                        android:id="@+id/themechangetip"
+                        style="@style/PersonSet_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/themeback"
+                        android:layout_marginTop="1dp"
+                        android:text="个人的联系方式与邮箱" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/arrow_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/arrow" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_gray"
+                android:contentDescription="@null" />
+            <!-- 修改密码 -->
+
+            <RelativeLayout
+                android:id="@+id/changePass_Rel"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_list_item" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                     >
+
+                    <TextView
+                        android:id="@+id/changePassTV"
+                        style="@style/PersonSet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Set_changePass" />
+
+                    <TextView
+                        android:id="@+id/changePassTV_second"
+                        style="@style/PersonSet_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/changePassTV"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/Set_changePass_2" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/arrow_pwdchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/arrow" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_gray"
+                android:contentDescription="@null" />
+
+            <!-- "选择主题背景" -->
+
+            <RelativeLayout
+                android:id="@+id/selecttheme"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:visibility="gone" 
+                android:background="@drawable/selector_list_item">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/themeback"
+                        style="@style/PersonSet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="选择主题背景" />
+
+                    <TextView
+                        android:id="@+id/themechangetip"
+                        style="@style/PersonSet_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/themeback"
+                        android:layout_marginTop="1dp"
+                        android:text="应用主题背景可以更换" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/arrow_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/frame_arrow" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_gray"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+
+            <!-- 是否自动登录 -->
+
+            <RelativeLayout
+                android:id="@+id/autoLogin_rel"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_list_item" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/autoTV"
+                        style="@style/PersonSet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Set_auto" />
+
+                    <TextView
+                        android:id="@+id/autoTV_second"
+                        style="@style/PersonSet_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/autoTV"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/Set_auto_2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/logintip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dip"
+                    android:background="@drawable/switch_1" >
+
+                    <ImageButton
+                        android:id="@+id/autoLogin_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/switch_3"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_gray"
+                android:contentDescription="@null" />
+            <!-- 绑定设备信息 -->
+
+            <RelativeLayout
+                android:id="@+id/bind_rel"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center" 
+                android:background="@drawable/selector_list_item">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/bindTV"
+                        style="@style/PersonSet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Set_bind" />
+
+                    <TextView
+                        android:id="@+id/bindTV_second"
+                        style="@style/PersonSet_text2"
+                        android:layout_width="235dip"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bindTV"
+                        android:layout_marginTop="1dp"
+                        android:gravity="left"
+                        android:singleLine="false"
+                        android:text="@string/Set_bind_2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bindtip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dip"
+                    android:background="@drawable/switch_1" >
+
+                    <ImageButton
+                        android:id="@+id/bind_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/switch_3"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_gray"
+                android:contentDescription="@null" />
+            <!-- 检查版本 -->
+
+            <RelativeLayout
+                android:id="@+id/check_rel"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_list_item" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/versionTV"
+                        style="@style/PersonSet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Set_checkVersion" />
+
+                    <TextView
+                        android:id="@+id/versionTV_second"
+                        style="@style/PersonSet_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/versionTV"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/Set_checkVersion_2" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/check_button"
+                    style="@style/PersonSet_text"
+                    android:layout_width="100dip"
+                    android:layout_height="35dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dip"
+                    android:background="@drawable/person_set_select"
+                    android:text="@string/Set_checkUpd"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_gray"
+                android:contentDescription="@null" />
+            <!-- 清除本地缓存 -->
+
+            <RelativeLayout
+                android:id="@+id/clear_rel"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center" 
+                android:background="@drawable/selector_list_item">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/clearTV"
+                        style="@style/PersonSet_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Set_clearData" />
+
+                    <TextView
+                        android:id="@+id/clearTV_second"
+                        style="@style/PersonSet_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/clearTV"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/Set_clearData_2" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/clear_button"
+                    style="@style/PersonSet_text"
+                    android:layout_width="100dip"
+                    android:layout_height="35dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="11dip"
+                    android:background="@drawable/person_set_select"
+                    android:text="@string/Set_clear"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/theme_set_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e0000000"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/theme_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:background="@color/transparent" >
+
+            <include layout="@layout/themeselect_dialog" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_list_item" >
+
+        <!-- 下载 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp" >
+
+            <ImageButton
+                android:id="@+id/apps_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/y_icon_1"
+                android:contentDescription="@null"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/apps_state_promote"
+                style="@style/filebrary_title_tiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apps_state"
+                android:layout_marginTop="5dip"
+                android:text="下载" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="65dp"
+            android:background="@drawable/y_l" />
+        <!-- 更新 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/line" >
+
+            <ImageButton
+                android:id="@+id/apps_state_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/y_icon_4"
+                android:contentDescription="@null"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/apps_front_promote"
+                style="@style/filebrary_title_tiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apps_state_front"
+                android:layout_marginTop="5dip"
+                android:text="更新"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_list_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip" >
+
+            <ImageView
+                android:id="@+id/app_detail_icon"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_launcher"
+                android:contentDescription="@null"
+                android:maxHeight="70dip"
+                android:maxWidth="70dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dip"
+            android:layout_toRightOf="@id/menu_list_icon" >
+
+            <!-- 显示已下载标签 -->
+
+            <RelativeLayout
+                android:id="@+id/up_promote_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/app_detail_name"
+                android:layout_marginRight="-25dip"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:id="@+id/up_promote_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/y_b"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/up_promote_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已下载"
+                    android:textColor="@color/white"
+                    android:textSize="7sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/app_detail_name"
+                style="@style/offical_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="影音娱乐" />
+
+            <TextView
+                android:id="@+id/app_detail_time"
+                style="@style/filebrary_title_tiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_detail_name"
+                android:text="10" />
+
+            <TextView
+                android:id="@+id/app_detail_version"
+                style="@style/filebrary_title_tiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_detail_time"
+                android:text="1" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_layout"
+        android:background="@drawable/line"
+        android:contentDescription="@null" />
+
+</RelativeLayout>

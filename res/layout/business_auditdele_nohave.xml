@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <!-- 返回 -->
+
+        <RelativeLayout
+            android:id="@+id/fragment_back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip" >
+
+            <!-- android:background="@drawable/selector_title" -->
+
+            <ImageView
+                android:id="@+id/fragment_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_back_button"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+        <!-- 两个标签切换 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="70dip"
+            android:layout_toRightOf="@id/fragment_back_rl" >
+
+            <LinearLayout
+                android:id="@+id/header_label_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/title_qh_1"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/btn_shiphave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/title_qh_2"
+                    android:clickable="true"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/btn_shiphave_text"
+                        style="@style/offical_other_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="有船作业"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_nohave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/btn_nohave_text"
+                        style="@style/offical_other_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="无船作业"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="开始时间" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/inport_box_1"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/beginTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical|left"
+                    android:hint="请输入"
+                    android:paddingLeft="5dip"
+                    android:textSize="@dimen/text_size_10" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="结束时间" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/inport_box_1"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/endTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical|left"
+                    android:hint="请输入"
+                    android:paddingLeft="5dip"
+                    android:textSize="@dimen/text_size_10" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ship_nature"
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ship_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="船名" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <EditText
+                    android:id="@+id/have_ship_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/inport_box_1"
+                    android:hint="请输入"
+                    android:paddingLeft="5dip"
+                    android:textColor="#474747"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:id="@+id/exit_turn"
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="航次" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <EditText
+                    android:id="@+id/ship_voyage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/inport_box_1"
+                    android:hint="请输入"
+                    android:paddingLeft="5dip"
+                    android:textColor="#474747"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/trade_category"
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_ship"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="作业公司" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <Spinner
+                    android:id="@+id/company_pinner"
+                    style="@style/ship_main_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/inport_box_1" >
+                </Spinner>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/arrow_ship"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    style="@style/ship_main_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="审核" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <Spinner
+                    android:id="@+id/currency_pinner"
+                    style="@style/ship_main_label"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/inport_box_1" >
+                </Spinner>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/arrow_ship"
+                    android:contentDescription="@null" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/business_confirm"
+                    style="@style/ship_main_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/ship_button_1"
+                    android:text="确定"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip" >
+
+            <TextView
+                android:id="@+id/title_prompte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="有船作业申请"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <!-- 有船作业列表标题栏 -->
+
+        <LinearLayout
+            android:id="@+id/haveShip_title_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="船名"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="航次"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="作业公司"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="船代"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="申请日期"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:background="#E9F1F7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="批准"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:background="#E9F1F7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="审核"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 无船作业列表标题栏 -->
+
+        <LinearLayout
+            android:id="@+id/noship_title_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:gravity="center_horizontal"
+           
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="作业公司"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="船代"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:background="#E9F1F7" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="申请日期"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:background="#E9F1F7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="批准"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:background="#E9F1F7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="审核"
+                    android:textColor="@color/ship_text"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="30dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+        <!-- 无船作业列表 -->
+
+        <com.hoperun.manager.components.CustomBaseListView
+            android:id="@+id/business_nohave_list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:cacheColorHint="#00000000"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:visibility="gone" 
+            android:footerDividersEnabled="false"
+            android:listSelector="@android:color/transparent" >
+        </com.hoperun.manager.components.CustomBaseListView>
+        <!-- 有船作业列表 -->
+
+        <com.hoperun.manager.components.CustomBaseListView
+            android:id="@+id/business_shiphave_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:overScrollFooter="@null"
+            android:scrollbars="none">
+        </com.hoperun.manager.components.CustomBaseListView>
+    </LinearLayout>
+
+</LinearLayout>

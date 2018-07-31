@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_floor"
+    android:descendantFocusability="blocksDescendants" >
+
+
+    <ImageView
+        android:id="@+id/file_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/pdf"
+        android:contentDescription="@null" />
+    <ImageView
+        android:id="@+id/file_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/error"
+        android:contentDescription="@null" />
+    
+      <RelativeLayout
+        android:id="@+id/fileinfo_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/file_icon" 
+        android:layout_toLeftOf="@id/file_delete">
+
+        <TextView
+            android:id="@+id/filetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于开展2013年.."
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>

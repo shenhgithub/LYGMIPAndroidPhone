@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/pop_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/pdf_docinfo"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_bottom_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/button_bg_1"
+            android:layout_gravity="center_vertical"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/pdf_cancel_title"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/pop_mid_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_ll"
+        android:layout_below="@+id/pop_title_rl"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/dialog_message" >
+
+        <LinearLayout
+            android:id="@+id/pdf_info_message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B4CDCD"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/pdf_info_description_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="最后处理人 ："
+                android:textColor="#2F4F4F"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/pdf_info_oparationer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:textColor="#2F4F4F"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/pdf_info_update_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="35dp"
+                android:textColor="#2F4F4F"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pdf_info_message_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdf_info_message_layout"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:weightSum="100" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="18"
+                android:gravity="left"
+                android:text="步骤"
+                android:textColor="@color/pdf_info_index_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="16"
+                android:gravity="left"
+                android:text="办理人员"
+                android:textColor="@color/pdf_info_index_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:gravity="left"
+                android:text="收到时间"
+                android:textColor="@color/pdf_info_index_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:gravity="left"
+                android:text="完成时间"
+                android:textColor="@color/pdf_info_index_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="16"
+                android:gravity="left"
+                android:text="处理意见"
+                android:textColor="@color/pdf_info_index_text" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/pdf_info_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdf_info_message_layout1"
+            android:listSelector="#00000000" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/pdf_info_no_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pdf_info_message_layout1"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="无详细信息"
+                android:textSize="22dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_1" >
+
+            <ImageView
+                android:id="@+id/waitdialog_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/waitanim"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

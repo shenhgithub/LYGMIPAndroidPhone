@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_marginRight="10dip"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/recoed_time"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="1.2"
+        android:text="00:00"
+        android:textColor="@color/qiandao_date"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/line_rl"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/sign_time_d"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/top_line"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/middle"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sign_line"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/bottom_line"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/middle"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sign_line"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:paddingBottom="5dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip" >
+
+        <TextView
+            android:id="@+id/recoed_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/sign_t_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text="00000"
+            android:textColor="@color/gray_9"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

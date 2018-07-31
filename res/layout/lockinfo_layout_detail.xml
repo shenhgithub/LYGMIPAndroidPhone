@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    
+   <RelativeLayout
+   android:id="@+id/lockinfo_rl"
+   android:layout_width="400dip"
+   android:layout_height="300dip"
+   android:paddingLeft="20dip"
+   android:paddingRight="20dip"
+   android:paddingBottom="20dip"
+   android:background="@drawable/dialog_background" 
+   >
+		   <LinearLayout
+		        android:id="@+id/bottom_ll"
+		        android:layout_width="wrap_content"
+		        android:layout_marginTop="10dip"
+		        android:layout_height="50dip"
+		        android:layout_centerHorizontal="true"
+				android:layout_alignParentBottom="true"
+		        android:orientation="horizontal" >
+		
+		        <Button
+		            android:id="@+id/left_btn"
+		            style="@style/offical_other_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/button_bg_1"
+		            android:gravity="center"
+		            android:text="@string/pdf_lock_close" />
+		
+		    </LinearLayout>
+		    
+		   	
+		    
+		    <RelativeLayout
+		        android:id="@+id/infodetail_rl"
+		        android:layout_width="fill_parent"
+		        android:layout_height="200dip"
+		        android:background="@drawable/dialog_message"
+		        android:layout_centerHorizontal="true"
+		        android:layout_above="@+id/bottom_ll">
+		        
+		        <TextView
+		            android:id="@+id/lockinfo_detail_tv"
+		            style="@style/offical_other_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="*** , 正在签批"/>
+		        
+		    </RelativeLayout>
+    
+    </RelativeLayout>
+
+</RelativeLayout>

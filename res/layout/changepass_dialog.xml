@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+      android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip"
+    android:paddingBottom="15dip"
+    android:background="@drawable/dialog_background" >
+
+    <RelativeLayout
+        android:id="@+id/rl_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_message"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/old_password_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/old_password_tv"
+                style="@style/change_bind_text"
+                android:layout_width="90dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/Change_old" />
+
+            <EditText
+                android:id="@+id/oldEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input"
+                android:focusable="true"
+                android:hint="@string/Change_old"
+                android:maxLength="15"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/LIGHTGRAY"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_password_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/old_password_layout"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/new_password_tv"
+                style="@style/change_bind_text"
+                android:layout_width="90dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/Change_new" />
+
+            <EditText
+                android:id="@+id/newEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input"
+                android:hint="@string/Change_newhint"
+                android:maxLength="15"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:textColorHint="@color/LIGHTGRAY"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirm_password_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/new_password_layout"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/confirm_password_tv"
+                style="@style/change_bind_text"
+                android:layout_width="90dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/Change_repeat" />
+
+            <EditText
+                android:id="@+id/repeatEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:background="@drawable/input"
+                android:hint="@string/Change_repeathint"
+                android:maxLength="15"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/LIGHTGRAY"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    
+    
+    
+    
+    <LinearLayout
+        android:layout_width="331dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_input"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/left_btn"
+            style="@style/Dialog_button_text"
+            android:layout_width="159dip"
+            android:layout_height="41dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="@string/Change_cancel"
+            android:background="@drawable/selector_dialog_button_left"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/right_btn"
+            style="@style/Dialog_button_text"
+            android:layout_width="159dip"
+            android:layout_height="41dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:text="@string/Change_confirm"
+            android:background="@drawable/selector_dialog_button"
+            android:gravity="center" />
+    </LinearLayout>
+    
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentRl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_1" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_second" >
+
+        <RelativeLayout
+            android:id="@+id/office_back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/office_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+        <!--
+        <RelativeLayout
+            android:id="@+id/office_search_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title" >
+
+            <ImageView
+                android:id="@+id/office_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:background="@drawable/search" />
+        </RelativeLayout>
+        -->
+
+        <TextView
+            android:id="@+id/office_title"
+            style="@style/offical_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dip"
+            android:text="0000" />
+    </RelativeLayout>
+
+    <com.hoperun.manager.components.DropDownRefreshListView
+        android:id="@+id/office_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="20dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:overScrollFooter="@null"
+        android:scrollbars="none" >
+    </com.hoperun.manager.components.DropDownRefreshListView>
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_1"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/waitdialog_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/waitanim"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_third_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:longClickable="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TESTSTE4444444" />
+    </FrameLayout>
+
+</RelativeLayout>

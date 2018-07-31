@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/tab_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <RelativeLayout
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip" >
+
+            <ImageView
+                android:id="@+id/fragment_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_back_button"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line_one"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/tab_btn"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="#d1d2d2" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_one"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="12" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="中文船名"
+                android:textColor="#364F66"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="12" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="抵锚时间"
+                android:textColor="#364F66"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="7" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="船代"
+                android:textColor="#364F66"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="7" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="引水"
+                android:textColor="#364F66"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="7" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="计划"
+                android:textColor="#364F66"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="18"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="靠泊"
+                android:textColor="#364F66"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="1dip"
+            android:layout_height="40dip"
+            android:background="#d1d2d2" >
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/line_two"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/title_block"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#d1d2d2" >
+    </RelativeLayout>
+
+    <com.hoperun.manager.components.DropDownRefreshListView
+        android:id="@+id/kaobo_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line_two"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:overScrollFooter="@null"
+        android:scrollbars="none" 
+        android:layout_marginBottom="10dip">
+    </com.hoperun.manager.components.DropDownRefreshListView>
+
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_1"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/waitdialog_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/waitanim"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+</RelativeLayout>

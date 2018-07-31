@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 个人通讯录详细列表项 -->
+
+    <RelativeLayout
+        android:id="@+id/file_doc_list_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/down_1" >
+
+        <ImageView
+            android:id="@+id/file_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dip"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_tp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/file_item_icon">
+             <TextView
+                android:id="@+id/files_item_type_name"
+                style="@style/txl_person_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true" />
+            <TextView
+                android:id="@+id/files_item_name"
+                android:layout_toRightOf="@id/files_item_type_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:gravity="right"
+                style="@style/txl_person_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

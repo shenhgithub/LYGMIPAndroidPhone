@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newmsg_rl"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_3"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:id="@+id/pop_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/newmsg_msg"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <RelativeLayout
+            android:id="@+id/office_back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title" >
+
+            <ImageView
+                android:id="@+id/closeIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:layout_marginBottom="20dip" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pop_bottom_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/button_bg_1"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_ll"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/shadow_1" />
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_1" >
+
+            <ImageView
+                android:id="@+id/waitdialog_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/waitanim"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+<!--        android:layout_above="@id/bottom_ll" -->
+    <LinearLayout
+        android:id="@+id/middlell"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pop_title_rl"
+ 
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <RelativeLayout
+            android:id="@+id/receiveRl"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:background="@drawable/input_gray"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip" >
+
+            <TextView
+                android:id="@+id/addReceive"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_bg_1"
+                android:gravity="center"
+                android:text="添加"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/receivePeople"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/addReceive"
+                android:gravity="center_vertical"
+                android:hint="添加收件人"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/titleRl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" >
+
+            <EditText
+                android:id="@+id/titleEt"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/input_gray"
+                android:hint="消息标题"
+                android:textSize="18sp" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contentRl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" >
+
+            <EditText
+                android:id="@+id/contentEt"
+                android:layout_width="fill_parent"
+                android:layout_height="140dip"
+                android:background="@drawable/input_gray"
+                android:gravity="top"
+                android:hint="输入回复内容(最多140个字)"
+                android:singleLine="false"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addDocRL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/line_box" >
+
+            <ImageView
+                android:id="@+id/addDocIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/pdf_1"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/addDocIv"
+                android:text="添加附件"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/attachGV"
+            android:layout_width="fill_parent"
+            android:layout_height="180dip"
+            android:layout_marginTop="10dip"
+            android:numColumns="1" >
+        </GridView>
+    </LinearLayout>
+
+</RelativeLayout>

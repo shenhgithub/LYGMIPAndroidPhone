@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="40dip" >
+
+    <ImageView
+        android:id="@+id/address_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:minHeight="40dip" />
+
+      <TextView
+            android:id="@+id/address_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/address_icon"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="14dip" />
+    
+    
+<!--     <LinearLayout
+        android:id="@+id/address_name_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/address_icon"
+        android:minHeight="40dip"
+        android:orientation="vertical"
+        android:layout_centerVertical="true" >
+
+
+    </LinearLayout> -->
+
+    <ImageView
+        android:id="@+id/address_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/frame_arrow"
+        android:layout_centerVertical="true"/>
+
+    <CheckBox
+        android:id="@+id/address_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

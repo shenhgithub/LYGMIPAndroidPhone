@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">MyLygport</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- net layer -->
+    <string name="no_net">没有连接网络，请确认！</string>
+    <string name="net_connect_timeout">网络连接超时，请确认！</string>
+    <string name="net_confirm">确认</string>
+    <string name="net_cancle">取消！</string>
+    <!-- main -->
+    <string name="main_online">在线</string>
+    <string name="main_offline">离线</string>
+    <string name="main_bidn">已绑定</string>
+    <string name="main_notbind">未绑定</string>
+    <string name="logout">注销</string>
+    <string name="private_set">主题</string>
+    <string name="system_set">设置</string>
+    <string name="theme">主题</string>
+    <string name="not_deal">待\n办</string>
+    <string name="deal">已\n办</string>
+    <string name="send">已发送</string>
+    <string name="close">关闭</string>
+    <string name="sort">排序</string>
+    <string name="refresh">刷新</string>
+    <string name="keywordforsearch">请输入关键字搜索</string>
+    <string name="search">搜 索</string>
+    <string name="read">已读</string>
+    <string name="unread">未读</string>
+    <string name="draft">草稿箱</string>
+    <string name="screen">筛选</string>
+    <string name="undo">待办</string>
+    <string name="havedo">已办</string>
+
+    <!-- 星期 -->
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="today">今天</string>
+    <string name="my_schedule_plan">我的日程安排</string>
+    <string name="my_schedule">我的日程</string>
+    <string name="leader_schedule">领导日程</string>
+    <string name="meetingroom_schedule">会议室预定</string>
+    <string name="sunday">周日</string>
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="schedule_plan">日程安排</string>
+    <!-- <string name="close">关闭</string> -->
+    <string name="schedule_title">日程标题:</string>
+    <string name="schedule_ring">提醒铃声:</string>
+    <string name="schedule_start_data">开始日期:</string>
+    <string name="schedule_start_time">开始时间:</string>
+    <string name="schedule_end_data">结束日期:</string>
+    <string name="schedule_end_time">结束时间:</string>
+    <string name="schedule_repeat">重复周期:</string>
+    <string name="schedule_remind_time">提醒时间:</string>
+    <string name="schedule_meeting_plan">会议安排:</string>
+    <string name="schedule_remark">内容描述:</string>
+    <string name="must_add">必填</string>
+    <string name="not_must_add">选填</string>
+    <string name="must_select">必选</string>
+    <string name="save_schedule">保存日程</string>
+    <string name="del_this_schedule">删除此日程</string>
+    <string name="update_this_schedule">修改此日程</string>
+    <string name="meeting_theme">会议主题:</string>
+    <string name="subscriber">预  约  者:</string>
+    <string name="meeting_data">会议时间:</string>
+    <string name="start_time">开始时间:</string>
+    <string name="end_time">结束时间:</string>
+    <string name="present_member">出席人员:</string>
+    <string name="meeting_declare">会议说明:</string>
+    <string name="meeting_add">添加</string>
+    <string name="meeting_ring_remind">添加到我的日程安排，开始铃声提醒：</string>
+    <string name="del_schedule">删除预定</string>
+    <string name="confirm_schedule">确认预定</string>
+    <string name="meeting_tip">提示：非本人预约的会议室，不可做修改/删除操作</string>
+    <string name="schedule_title_not_null">日程标题不能为空</string>
+    <string name="schedule_start_data_not_null">开始日期不能为空</string>
+    <string name="schedule_start_time_not_null">开始时间不能为空</string>
+    <string name="schedule_end_data_not_null">结束日期不能为空</string>
+    <string name="schedule_end_time_not_null">结束时间不能为空</string>
+    <string name="new_add">新建</string>
+    <string name="cancle">取消</string>
+    <string name="ok">设置</string>
+    <string name="new_add_schedule">新建日程安排</string>
+    <string name="schedule_detail">日程安排详情</string>
+    <string name="all_day_schedule">全天日程安排</string>
+    <string name="select_end_date">请先选择结束日期</string>
+    <string name="endsmallstart">结束日期不能小于开始日期</string>
+    <string name="startsmalltoday">开始日期不能小于今日</string>
+    <string name="net_wrong">请求服务器数据失败！</string>
+    <string name="operator_fail">操作失败</string>
+
+    <!-- Login wang_ling 2013-09-25 -->
+    <string name="Login_HintName">请输入用户名</string>
+    <string name="Login_HintPass">请输入密码</string>
+    <string name="Login_HintVerify">输入验证码</string>
+    <string name="Login_SendPh">发送到手机</string>
+    <string name="Login_Regist">用户注册</string>
+    <string name="Login_Remind">记住用户名/密码</string>
+    <string name="Login_AutoLogin">自动登录</string>
+    <string name="Login_oldVersion">版本：</string>
+    <string name="Login_newVersion">最新版本：</string>
+    <string name="Login_Login">登&#160;&#160;录</string>
+    <string name="Login_Tips_one">Copyright © 2014</string>
+    <string name="Login_Tips_two">连云港港口集团通信信息工程公司</string>
+    <string name="Login_Version">v  1.0</string>
+    <string name="Login_nameNull">用户名不能为空</string>
+    <string name="Login_passNull">密码不能为空</string>
+    <string name="Login_Confirm">确定</string>
+    <string name="Login_Cancel">取消</string>
+    <string name="Login_bind_tip">该设备还未绑定，是否绑定</string>
+    <string name="Login_passError">密码错误</string>
+    <string name="Login_noUser">用户不存在</string>
+    <string name="Login_fail">登录失败</string>
+    <string name="Login_other_bind">用户已绑定登录的设备，不能使用当前设备登录.</string>
+    <string name="Login_network_error">网络错误</string>
+    <string name="Login_data_error">数据返回错误，请稍后重试</string>
+    <string name="Login_offline">网络断开，是否切换成离线状态</string>
+
+    <!-- pdf ren_qiuing 2013-10-08 -->
+    <string name="pdf_info">信息</string>
+    <string name="pdf_send">发送</string>
+    <string name="pdf_turn">翻转</string>
+    <string name="pdf_help">帮助</string>
+    <string name="pdf_attach">附件</string>
+    <string name="pdf_back">返回</string>
+    <string name="pdf_sign">"签批"</string>
+    <string name="pdf_sign_b">"开始签批"</string>
+    <string name="pdf_sign_e">"结束签批"</string>
+    <string name="pdf_page_pre">"上页"</string>
+    <string name="pdf_page_next">"下页"</string>
+    <string name="pdf_pen_color">"画笔\n颜色"</string>
+    <string name="pdf_pen_stress">"笔迹\n粗细"</string>
+    <string name="pdf_pen_eraser">"橡皮"</string>
+    <string name="pdf_pen_empty">"清空"</string>
+    <string name="pdf_pen_redo">"还原"</string>
+    <string name="pdf_pen_undo">"重做"</string>
+    <string name="pdf_help_noremide">"不再提示"</string>
+    <string name="pdf_help_know">"我知道了"</string>
+    <string name="address_header_latest">"最近联系人"</string>
+    <string name="address_header_contacts">"通讯录"</string>
+    <string name="address_header_other">"其他"</string>
+    <string name="address_hasselector">"已选联系人"</string>
+    <string name="address_cancel">"取消"</string>
+    <string name="address_send">"确定发送"</string>
+    <string name="address_title">"联系人"</string>
+    <string name="textsize_14">"14"</string>
+    <string name="textsize_16">"16"</string>
+    <string name="textsize_18">"18"</string>
+    <string name="textsize_20">"20"</string>
+    <string name="pdf_docinfo">"文档信息"</string>
+    <string name="pdf_cancel_title">"关闭"</string>
+    <string name="pdf_lock_title">"文件已被锁定保护"</string>
+    <string name="pdf_lock_close">"关闭"</string>
+    <string name="pdf_lock_checkdetail">"查看谁在签批"</string>
+    <string name="pdf_lock_detail">"本文档当前正在被其他人签批中，结束签批后，文档会自动解锁，请您稍后再尝试签批！"</string>
+    <string name="pdf_sendfail_Confirm">确定</string>
+    <string name="pdf_sendfail_Cancel">取消</string>
+    <string name="pdf_send_confirm">"您的签批将被合并发送！"</string>
+    <string name="pdf_turn_info">"翻转后将清除当前签批笔迹，是否翻转?"</string>
+    <string name="pdf_Confirm">确定</string>
+    <string name="pdf_Cancel">取消</string>
+    <string name="pdf_nextstep_title">"下一步处理步骤"</string>
+
+    <!-- mainActivity wang_ling 2013-10-08 -->
+    <string name="main_yestoday">昨天</string>
+    <string name="main_today">今天</string>
+    <string name="main_tomorrow">明天</string>
+    <string name="main_tips">江苏润和软件    版权所有</string>
+    <string name="main_nouser">用户不存在</string>
+    <string name="main_passError">密码错误</string>
+    <string name="main_modifyFail">密码修改失败</string>
+    <string name="main_exit_app">是否确定退出？</string>
+    <string name="search_key_word">关键字:<xliff:g>%1$s</xliff:g></string>
+    <string name="funnel_key_word">筛选:<xliff:g>%1$s</xliff:g></string>
+    <string name="search_key_word_result">搜索结果:<xliff:g>%1$s</xliff:g>条</string>
+    <string name="funnel_key_word_result">筛选结果:<xliff:g>%1$s</xliff:g>条</string>
+    <string name="cancel_search">退出搜索</string>
+
+    <!-- UpdDialogActivity wang_ling 2013-10-15 -->
+    <string name="UpdDialog_new_version">发现新版本，提供更完美的体验</string>
+    <string name="UpdDialog_new_version1">请更新至最新版本。</string>
+    <string name="UpdDialog_next_update">升级</string>
+    <string name="UpdDialog_update">暂时不升级</string>
+    <string name="UpdDialog_updateing">版本升级中 &#8230;</string>
+    <string name="UpdDialog_title">系统更新</string>
+    <string name="UpdDialog_checkVersion">检测到有最新版本</string>
+    <string name="UpdDialog_updateNow">是否立刻升级？</string>
+    <string name="UpdDialog_weekday">星期</string>
+    <string name="UpdDialog_welcome"></string>
+    <string name="UpdDialog_noUpdate">当前已是最新版本</string>
+    <string name="UpdDialog_cancel">取消升级</string>
+    <string name="UpdDialog_percent">0%</string>
+
+    <!-- 个人设置中心  wang_ling 2013-11-05 -->
+    <string name="Set_head">头像设置</string>
+    <string name="Set_head_2">自定义用户头像</string>
+    <string name="Set_changePass">修改密码</string>
+    <string name="Set_changePass_2">修改用户密码</string>
+    <string name="Set_auto">是否自动登录</string>
+    <string name="Set_auto_2">开启后下次登录时自动登录</string>
+    <string name="Set_bind">绑定设备信息</string>
+    <string name="Set_bind_2">绑定手机，手机遗失时可锁定并销毁数据</string>
+    <string name="Set_checkVersion">检查版本升级</string>
+    <string name="Set_checkVersion_2">手动检查有新版本</string>
+    <string name="Set_clearData">清除本地缓存数据</string>
+    <string name="Set_clearData_2">清理本地的数据缓存文件</string>
+    <string name="Set_clear">清理数据</string>
+    <string name="Set_checkUpd">检查更新</string>
+    <!-- 修改密码  wang_ling 2013-11-05 -->
+    <string name="Change_old">旧密码</string>
+    <string name="Change_new">新密码</string>
+    <string name="Change_newhint">新密码（6&#8211;15个字符）</string>
+    <string name="Change_repeat">重复新密码</string>
+    <string name="Change_repeathint">重复新密码（6&#8211;15个字符）</string>
+    <string name="Change_cancel">放弃修改</string>
+    <string name="Change_confirm">确认修改</string>
+    <string name="Change_oldNull">旧密码为空，请输入旧密码！</string>
+    <string name="Change_newNull">新密码不符合要求，请输入6&#8211;15个字符!</string>
+    <string name="Change_repeatNull">确认密码不符合要求，请输入6&#8211;15个字符!</string>
+    <string name="Change_different">两次密码不同，请重新输入!</string>
+
+    <!-- 设备绑定  wang_ling 2013-11-05 -->
+    <string name="Bind_userName">用户名：</string>
+    <string name="Bind_deviceID">硬件设备号：</string>
+    <string name="Bind_loginPass">登录密码:</string>
+    <string name="Bind_loginPassHint">登录使用的密码</string>
+    <string name="Bind_cancel">暂不绑定</string>
+    <string name="Bind_confirm">确认绑定</string>
+    <string name="UNBind_cancel">暂不解绑</string>
+    <string name="UNBind_confirm">确认解绑</string>
+    <string name="Bind_tip_one">1.当前用户名可多台平板电脑/手机做安全绑定。绑定后此用户名只可在已绑定的平板电脑/手机上登录使用；</string>
+    <string name="Bind_tip_two">2.已绑定的平板电脑/手机遗失，可用另一台已绑定平板电脑/手机（或后台客服）定位、锁定并删数据文件；</string>
+    <string name="Bind_tip_three">3.绑定设备需使用注册的 登录密码做身份安全校验；</string>
+    <string name="Bind_passNull">请输入登录密码做身份验证</string>
+    <string name="select_file_type">选择要清理的文件类型：</string>
+    <string name="select_all">全选</string>
+    <string name="clear_data">数据清理</string>
+    <!-- 清理缓存 wang_ling 2013-11-06 -->
+    <string name="clear_clearing">正在清理中</string>
+    <string name="clear_wait">请稍后</string>
+    <string name="clear_local">本地缓存文件</string>
+    <string name="clear_hasclear">已完成清理</string>
+    <string name="clear_confirm">确认</string>
+
+    <!-- 主题选择 wang_ling 2013-11-08 -->
+    <string name="theme_select">请选择背景图</string>
+    <string name="_">***,正在签批</string>
+
+    <!-- 头像设置 wen_tao 2013-12-4 -->
+    <string name="header_set_hint">请选择下方头像设为新头像</string>
+    <string name="go_back_button">恢复默认</string>
+    <string name="save_header_button">确认保存</string>
+    <string name="moren_hint">默认</string>
+    <string name="local_hint">本机</string>
+    <!-- 天气 wen_tao 2013-11-26 -->
+    <string name="weather_weather">10</string>
+    <string name="weather_sheshidu">℃</string>
+    <string name="weather_weather2">晴</string>
+    <string name="weather_hint">获取天气信息失败</string>
+    <string name="select_city_name">南京</string>
+    <string name="weather_date">2013.11.15  星期五</string>
+    <string name="select_city">请选择城市</string>
+    <string name="Automatic_positioning">自动定位：</string>
+    <string name="Automatic_positioning_hint">如果自动定位失败，请手动选择</string>
+    <string name="holt_city">热门城市</string>
+    <string name="all_city">全部城市</string>
+    <string name="city">南京</string>
+    <string name="pen_settings">Pen settings</string>
+    <string name="pen_settings_preset_empty">No preset settings</string>
+    <string name="pen_settings_preset_delete_title">Delete</string>
+    <string name="pen_settings_preset_delete_msg">Selected pen preset will be permanently erased</string>
+    <string name="pen_settings_preset_exist">Already exist</string>
+    <string name="pen_settings_preset_maximum_msg">Reached maximum number(12) of preset slot</string>
+    <string name="eraser_settings">Eraser settings</string>
+    <string name="clear_all">Clear all</string>
+    <string name="text_settings">Text settings</string>
+    <string name="text_settings_tab_font">Font</string>
+    <string name="text_settings_tab_paragraph">Paragraph</string>
+    <string name="text_settings_tab_paragraph_align">Align</string>
+    <string name="textbox_hint">Insert Text</string>
+    <string name="texttitle">enter text here</string>
+    <string name="filling_settings">Filling settings</string>
+    <string name="settingview_close_btn_desc">close</string>
+    <string name="user_font_name1">Chococooky</string>
+    <string name="user_font_name2">Rosemary</string>
+    <string name="dingwei">定位</string>
+    <string name="putong_map">普通图</string>
+    <string name="weixing_map">卫星图</string>
+    <string name="search_hint">请输入要查询的内容</string>
+    <string name="search_jieguo">查询结果</string>
+    <string name="back">返回</string>
+    <string name="collet">收藏</string>
+    <string name="aver">平均车速：</string>
+    <string name="rate">车流量：</string>
+    <string name="camera">当日抓拍：</string>
+    <string name="RFID">RFID：</string>
+    <string name="longitude">卡口经度</string>
+    <string name="latitude">卡口纬度：</string>
+    <string name="pre_1">预置位1</string>
+    <string name="pre_2">预置位2</string>
+    <string name="pre_3">预置位3</string>
+    <string name="pre_4">预置位4</string>
+    <string name="pre_5">预置位5</string>
+    <string name="pre_6">预置位6</string>
+    <string name="pre_7">预置位7</string>
+    <string name="pre_8">预置位8</string>
+
+    <!-- 通讯录 -->
+    <string name="contact_lately">最近联系人</string>
+    <string name="contact_company">企业通讯录</string>
+    <string name="contact_select">已选中的收件人</string>
+    <string name="contact_send">确定发送</string>
+    
+    <!-- 内部邮件 -->
+    <string name="newmsg_msg">新建消息</string>
+    <string name="newmsg_create">新建即时消息</string>
+    <string name="newmsg_receive">已收到的消息</string>
+    <string name="newmsg_send">已发送的消息</string>
+    
+    <!-- 主页tab -->
+    <string name="main_function">功能列表</string>
+    <string name="main_sign">签到</string>
+    <string name="main_myapp">我的应用</string>
+    <string name="main_newmsg">消息中心</string>
+   
+    <string name="txl_tel">工作手机:</string>
+    <string name="txl_office">办公电话:</string>
+    <string name="txl_email">集团邮箱:</string>
+    <string name="txl_more">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;>>更多 </string>
+</resources>

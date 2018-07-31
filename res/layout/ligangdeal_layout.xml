@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <RelativeLayout
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip" >
+
+            <ImageView
+                android:id="@+id/fragment_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_back_button"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="离港处理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_block" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/plan_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/plan_text"
+                    android:layout_width="70dp"
+                    android:layout_height="140dp"
+                    android:background="@color/title_backgrond" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="计\n\n划"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_22" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="140dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#d1d2d2" >
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/text_background" >
+
+                        <RelativeLayout
+                            android:id="@+id/come_block"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="24dp" >
+
+                            <TextView
+                                android:id="@+id/come_time_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="计划进港时间:"
+                                android:textSize="@dimen/text_size_20" />
+
+                            <TextView
+                                android:id="@+id/come_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:layout_toRightOf="@id/come_time_text"
+                                android:textSize="@dimen/text_size_20" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/go_block"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/come_block"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="49dp" >
+
+                            <TextView
+                                android:id="@+id/go_time_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="计划离港时间:"
+                                android:textSize="@dimen/text_size_20" />
+
+                            <TextView
+                                android:id="@+id/go_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:layout_toRightOf="@id/go_time_text"
+                                android:textSize="@dimen/text_size_20" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/plan_done_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dip"
+                            android:background="@drawable/ship_button_1"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:text="计划执行完毕"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_18" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_alignParentBottom="true"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip" >
+
+                <LinearLayout
+                    android:id="@+id/deal_text"
+                    android:layout_width="70dp"
+                    android:layout_height="220dp"
+                    android:background="@color/title_backgrond" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="处\n\n理"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_22" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="220dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#d1d2d2" >
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/text_background" >
+
+                        <RelativeLayout
+                            android:id="@+id/reason_block"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="20dp" >
+
+                            <TextView
+                                android:id="@+id/tongzhi_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="通知引水时间:"
+                                android:textSize="@dimen/text_size_20" />
+
+                            <TextView
+                                android:id="@+id/tongzhi_time"
+                                android:layout_width="210dip"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_toRightOf="@id/tongzhi_text"
+                                android:background="@drawable/inport_box_1" 
+                                android:padding="5dip"
+                                android:textColor="#ababab"
+                                android:textSize="@dimen/text_size_20"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/positon_block"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/reason_block"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="20dp" >
+
+                            <TextView
+                                android:id="@+id/reason_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="计划未完成原因:"
+                                android:textSize="@dimen/text_size_20" />
+
+                            <EditText
+                                android:id="@+id/reason_edit"
+                                android:layout_width="250dip"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/reason_text"
+                                android:background="@drawable/inport_box_1" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/positon_time_block"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/positon_block"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="20dp" >
+
+                            <TextView
+                                android:id="@+id/leave_time_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="离港时间:"
+                                android:textSize="@dimen/text_size_20" />
+
+                            <TextView
+                                android:id="@+id/position_time"
+                                android:layout_width="210dip"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/leave_time_text"
+                                android:background="@drawable/inport_box_1"
+                                android:textColor="#ababab"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/text_size_20" 
+                                android:padding="5dip"
+                                />
+
+                            <Button
+                                android:id="@+id/leave_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:layout_toRightOf="@id/position_time"
+                                android:background="@drawable/ship_button_1"
+                                android:paddingLeft="10dip"
+                                android:paddingRight="10dip"
+                                android:text="船舶离港"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_20" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_alignParentBottom="true"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dip" >
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_1"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/waitdialog_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/waitanim"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+</RelativeLayout>

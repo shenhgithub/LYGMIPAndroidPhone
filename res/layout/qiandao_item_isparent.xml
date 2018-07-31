@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_marginRight="10dip"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="1.2" />
+
+    <RelativeLayout
+        android:id="@+id/icon_layout"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/sign_time"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/icon_line"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/icon"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sign_line"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/icon"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sign_line"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" 
+        android:layout_weight="8">
+
+        <TextView
+            android:id="@+id/recoed_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:gravity="center_vertical"
+            android:text="00000"
+            android:textColor="#849EB7"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

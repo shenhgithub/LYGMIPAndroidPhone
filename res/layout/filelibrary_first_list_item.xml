@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants" >
+<!-- 文件库一级菜单列表子项 -->
+    <RelativeLayout
+        android:id="@+id/file_doc_list_item_layout"
+        android:layout_width="match_parent"
+        android:background="@drawable/list_1"
+        android:layout_height="100dip" >
+
+        <ImageView
+            android:id="@+id/file_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dip"
+            android:background="@drawable/icon_folder" 
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/file_item_new_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/file_item_icon"
+            android:layout_alignTop="@+id/file_item_icon"
+            android:layout_marginLeft="-15dip"
+            android:layout_marginTop="-15dip"
+            android:src="@drawable/new_icon"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dip"
+            android:layout_toRightOf="@+id/file_item_icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/files_item_name"
+                style="@style/offical_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/files_item_des"
+                android:textColor="#bcbcbc"
+                android:textSize="24sp"
+                android:gravity = "center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+			/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dip"
+            android:src="@drawable/frame_arrow" 
+            android:contentDescription="@null"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pdf_help_rlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:background="@drawable/help_1">
+    
+    
+    <RelativeLayout 
+        android:id="@+id/temp"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_alignParentBottom="true"
+        ></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:layout_above="@+id/temp"
+        >
+        
+        <ImageButton 
+            android:id="@+id/pdf_help_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/help_skip1"
+            android:layout_centerVertical="true"/>
+        
+        <TextView 
+            android:id="@+id/pdf_help_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pdf_help_skip"
+            android:layout_marginLeft="10dip"
+            android:text="@string/pdf_help_noremide"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+        
+        <RelativeLayout 
+            android:id="@+id/pdf_help_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pdf_help_t"
+            android:layout_marginLeft="10dip"
+            android:clickable="true"
+            >
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/know_bg"
+                android:layout_centerInParent="true"
+				android:paddingLeft="20dip"
+				android:paddingRight="20dip"
+                android:text="@string/pdf_help_know"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+        
+        </RelativeLayout>
+        
+
+    </RelativeLayout>
+</RelativeLayout>

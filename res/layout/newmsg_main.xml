@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.hoperun.manager.components.HeadView
+        android:id="@+id/mobile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+<!--  
+    <com.hoperun.manager.components.DropDownRefreshListView
+        android:id="@+id/lv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mobile_header"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:overScrollFooter="@null"
+        android:scrollbars="none" 
+        android:visibility="gone">
+    </com.hoperun.manager.components.DropDownRefreshListView>
+-->
+    
+    <RelativeLayout
+        android:id="@+id/custom_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/fragment_right_rl"
+        android:layout_below="@+id/mobile_header" >
+    </RelativeLayout>
+    
+<!--
+    <RelativeLayout
+        android:id="@+id/no_datarl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_header"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/no_dataim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/list_nodata"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_1" >
+
+            <ImageView
+                android:id="@+id/waitdialog_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/waitanim"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile_header"
+        android:background="@drawable/tab_bg_2"
+        android:visibility="gone"
+        android:contentDescription="@null" />
+
+</RelativeLayout>

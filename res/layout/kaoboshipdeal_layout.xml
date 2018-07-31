@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <RelativeLayout
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip" >
+
+            <ImageView
+                android:id="@+id/fragment_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_back_button"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="作业处理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_block"
+        android:layout_below="@id/title_block"
+        android:layout_marginTop="10dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="#d1d2d2" >
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    android:background="@color/title_backgrond" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="处\n\n理"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="94"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="40dip"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="13" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="当前靠停泊位"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="40dip"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="17" >
+
+                            <TextView
+                                android:id="@+id/current_position"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="40dip"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="13" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="卸货余吨"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="40dip"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30" >
+
+                            <TextView
+                                android:id="@+id/left_tons"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_16" 
+                                android:text="0"/>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="40dip"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="17"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/save_left"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ship_button_1"
+                                android:gravity="center"
+                                android:text="余吨保存"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="40dip"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#d1d2d2" >
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="船舶考核信息"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="17"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="卸船数："
+                                    android:textSize="@dimen/text_size_16" />
+
+                                <TextView
+                                    android:id="@+id/load_ships"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/text_size_16" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="总停时："
+                                    android:textSize="@dimen/text_size_16" />
+
+                                <TextView
+                                    android:id="@+id/total_ships"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/text_size_16" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="今日卸船数"
+                                    android:textSize="@dimen/text_size_16" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="今日停时"
+                                    android:textSize="@dimen/text_size_16" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="30" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <EditText
+                                    android:id="@+id/today_load_ships"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/text_size_16"
+                                    android:text="0" 
+                                    android:background="@null"/>
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="1dip"
+                                    android:background="#d1d2d2"
+                                    android:gravity="center_vertical" >
+                                </RelativeLayout>
+
+                                <EditText
+                                    android:id="@+id/today_total_ships"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/text_size_16"
+                                    android:text="0" 
+                                    android:background="@null"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="17"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/makesure_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ship_button_1"
+                                android:gravity="center"
+                                android:text="确认考核信息"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#d1d2d2" >
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="卸货开始时间"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/load_start_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="17" >
+
+                            <Button
+                                android:id="@+id/load_start_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ship_button_2"
+                                android:gravity="center"
+                                android:text="卸货开始"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/load_start"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/load_start_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:background="@drawable/xz_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="确认"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#d1d2d2" >
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="卸货结束时间"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/load_end_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="17" >
+
+                            <Button
+                                android:id="@+id/load_end_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ship_button_2"
+                                android:gravity="center"
+                                android:text="卸货结束"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/load_end"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/load_end_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:background="@drawable/xz_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="确认"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#d1d2d2" >
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="装货开始时间"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/upload_start_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="17" >
+
+                            <Button
+                                android:id="@+id/upload_start_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ship_button_2"
+                                android:gravity="center"
+                                android:text="装货开始"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/upload_start"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/upload_start_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:background="@drawable/xz_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="确认"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#d1d2d2" >
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="13" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="装货结束时间"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/upload_end_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="17" >
+
+                            <Button
+                                android:id="@+id/upload_end_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ship_button_2"
+                                android:gravity="center"
+                                android:text="装货结束"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/upload_end"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/upload_end_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:background="@drawable/xz_1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dip"
+                                android:text="确认"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="1dip"
+                            android:layout_height="fill_parent"
+                            android:background="#d1d2d2" >
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#d1d2d2" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dip" >
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dip" >
+
+        <Button
+            android:id="@+id/wrong_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ship_button_1"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="出错处理"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/not_ship_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:layout_toRightOf="@id/wrong_btn"
+            android:background="@drawable/ship_button_1"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="不是装卸作业船舶"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_1"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/waitdialog_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/waitanim"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+</RelativeLayout>

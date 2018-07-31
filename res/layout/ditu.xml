@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title" >
+
+        <RelativeLayout
+            android:id="@+id/office_back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title" >
+
+            <ImageView
+                android:id="@+id/fragment_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/office_title"
+            style="@style/offical_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="电子地图" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_search_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_title" >
+
+            <ImageView
+                android:id="@+id/fragment_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+        <!-- 搜索begin -->
+
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/banner"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20sp"
+                android:text="@string/search"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:layout_toRightOf="@+id/search"
+                android:paddingLeft="10dip" >
+
+                <EditText
+                    android:id="@+id/search_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/input_gray"
+                    android:hint="@string/keywordforsearch" />
+
+                <Button
+                    android:id="@+id/search_btn"
+                    style="@style/offical_other_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignRight="@+id/search_edt"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_bg_2"
+                    android:text="@string/search"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 搜索end -->
+
+        <ImageButton
+            android:id="@+id/dingwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/dingwei"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/open_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/open_search_list"
+            android:contentDescription="@null"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/huchu_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="-3dp"
+            android:layout_below="@id/search_layout"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="300dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/huchu_list"
+                android:paddingLeft="10dp" >
+
+                <TextView
+                    android:id="@+id/search_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="20dp"
+                    android:text="@string/search_jieguo"
+                    android:textColor="#989898"
+                    android:textSize="13sp" />
+
+                <ListView
+                    android:id="@+id/searchInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="23dp"
+                    android:divider="#00000000" >
+                </ListView>
+
+                <RelativeLayout
+                    android:id="@+id/load_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/waitdialog_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/waitanim"
+                        android:contentDescription="@null" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/close_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-5dp"
+                android:layout_toLeftOf="@id/relative"
+                android:background="@drawable/close_search_list"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tubiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/search_layout"
+            android:background="@drawable/tubiao_bg" >
+
+            <ImageButton
+                android:id="@+id/shitu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/weix"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
